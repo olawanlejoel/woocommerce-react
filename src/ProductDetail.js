@@ -32,10 +32,9 @@ function ProductDetail() {
 	return (
 		<div className="product-detail">
 			<h2>{product.name}</h2>
-			<div dangerouslySetInnerHTML={{ __html: product.description }} />
 			<h4>Original Price: {product.regular_price}</h4>
 			<h4>Sale price: {product.sale_price}</h4>
-			<div dangerouslySetInnerHTML={{ __html: product.short_description }} />
+			<img src={product.images[0].src} alt="Product banner" />
 			<strong>
 				{product.stock_status === 'instock' ? 'In stock' : 'Out of stock'}
 			</strong>

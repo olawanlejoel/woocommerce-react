@@ -32,7 +32,7 @@ function App() {
 				products.map((product) => (
 					<li key={product.id}>
 						<Link to={`/product/${product.id}`}>
-							<div dangerouslySetInnerHTML={{ __html: product.description }} />
+							<img src={product.images[0].src} alt="Product banner" />
 							<h2>{product.name}</h2>
 							<p>Sale price: {product.sale_price}</p>
 							<strong>
